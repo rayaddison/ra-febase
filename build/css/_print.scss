@@ -1,0 +1,96 @@
+@media print {
+
+	////////////////////////////////////////
+	////////////// Framework ///////////////
+	////////////////////////////////////////
+
+	.row {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+		background: none !important;
+
+	}
+
+	.container {
+		width: auto !important;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		background: none !important;
+
+	}
+
+	.col-s-1, .col-s-2, .col-m-1, .col-m-2, .col-m-3, .col-m-half, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4 {
+		width: auto !important;
+		float: none !important;
+	}
+
+	////////////////////////////////////////
+	//////////////// Body //////////////////
+	////////////////////////////////////////
+
+
+	body {
+		font-size: 12pt;
+		line-height: 1.25em;
+	}
+
+	/////////////////////////////////////////
+	/////////////// Headings ////////////////
+	/////////////////////////////////////////
+
+	h1 {
+		font-size: 36pt;
+		line-height: 1.25em;
+	}
+
+	h2 {
+		font-size: 24pt;
+		line-height: 1.25em;
+	}
+
+
+	h3 {
+		font-size: 18pt;
+		line-height: 1.25em;
+	}
+
+	h4 {
+		font-size: 14pt;
+		line-height: 1.25em;
+	}
+
+	/////////////////////////////////////////
+	/////////////// Generic /////////////////
+	/////////////////////////////////////////
+
+
+	body {
+		background: none;
+	}
+
+	leader {
+		display: none;
+	}
+
+	#wrapper {
+		width: auto;
+		margin: 0;
+		padding: 0 2%;
+		background: none;
+	}
+
+	header {
+		display: none;
+	}
+
+	article a:after {
+		content: " [" attr(href) "] ";
+	}
+
+	aside a:after {
+		display: none;
+	}
+
+}

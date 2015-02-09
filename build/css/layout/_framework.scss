@@ -1,0 +1,207 @@
+// Susy settings
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 24,
+  gutters: 0.5,
+  column-width: false,
+  global-box-sizing: border-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+$gutterless__grid: layout( 24 0 fluid float inside);
+
+body {
+  background:white;
+}
+
+#wrapper {
+
+}
+
+// CONTAINERS //
+
+.container {
+
+  @include container;
+  @include global-box-sizing(border-box); // ensures anything in a susy container has box-sizing model
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include bkp(break__1) {
+    width: 460px;
+    padding-left: 0;
+    padding-right: 0;
+    }
+  @include bkp(break__2) {
+    width: 700px;
+    }
+  @include bkp(break__3) {
+    width: 940px;
+    }
+    
+}
+
+// ROWS //
+
+// Use a row to clear the susy Layout
+
+.row {
+  @include break;
+}
+
+// Layout Modifiers //
+
+/* Break Hide/Show */
+
+.above__break3 {
+    display: none;
+
+    @include bkp(break__3) {
+        display: block;
+    }
+}
+
+.below__break3 {
+    @include bkp(break__3) {
+        display: none;
+    }
+}
+
+/* Position */
+
+.pull--right {
+    float: right;
+}
+
+/* Padding / Margins */
+
+.no--pad {
+	padding:0px !important;
+}
+
+
+// IMAGES //
+
+img {
+    margin: 0;
+    padding: 0;
+
+    &.img--responsive {
+      width: 100%;
+      height: auto;
+    }
+}
+
+// NAV LISTS //
+
+.nav__list {
+
+    width: 100%;
+    padding: 0;
+
+    li {
+      padding: 0 0 1.5em;
+      margin: 0;
+
+      @include bkp(break__1) {
+          display: inline;
+          padding: 0 1em 0 0;
+        }
+    }
+}
+
+
+// KEYLINES //
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid $grey-t1;
+
+}
+
+
+// IMAGE SWAPPING LAYOUT RULES FOR WALLPANEL GRID ONLY //
+
+// The body:after is required to allow JS to detect the current breakpoint
+
+body:after {
+
+    // display none on this element causes function to break in Chrome. The following is an alternative hide for the after element;
+
+    // font-size:0;
+    // float: left;
+    // height: 0;
+
+    //
+    
+    content: 'break__0';
+   
+    @include bkp(break__1) {
+        content: 'break__1';
+        }
+    @include bkp(break__2) {
+        content: 'break__2';
+        }
+    @include bkp(break__3) {
+        content: 'break__3';
+        }
+}
+
+body.cke_editable {
+    &:after {
+      display:none;
+    }
+}
+
+// VIDEO
+
+.videos {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+margin-bottom: 40px;
+}
+
+.videos iframe, .videos object, .videos embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.entry-content img, .entry-content iframe, .entry-content object, .entry-content embed {
+max-width: 100%;
+}
+
+// Prevent CSS Animations on page loads
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}

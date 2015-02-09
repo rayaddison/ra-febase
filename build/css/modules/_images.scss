@@ -1,0 +1,12 @@
+img {
+	display: block;
+
+	&.img--responsive {
+		width: 100%;
+		height:auto;
+	}
+
+	article & {
+		margin-bottom: 1em;
+	}
+}

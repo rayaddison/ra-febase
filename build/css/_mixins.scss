@@ -1,0 +1,60 @@
+// We're using Bourbon for most mixins
+// The mixins below are global and aren't available in Bourbon
+// The following mixins are available and vendor prefixes are included.
+//
+// Box Shadow // @include shadow($x, $y, $blur, $color)
+// Shadow Inset // @include shadow-inset($x, $y, $blur, $color)
+
+// REM with fallback
+
+@mixin fontRem($rem) {
+  font-size: $rem * $baseFontSize;
+  font-size: ($rem) + rem;
+}
+
+// Box shadow
+
+@mixin shadow($x, $y, $blur, $spread, $color) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+	box-shadow: $x $y $blur $spread $color;
+}
+
+// Inset Shadow
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+	-webkit-box-shadow: inset $x $y $blur $color;
+	-moz-box-shadow: inset $x $y $blur $color;
+	box-shadow: inset $x $y $blur $color;
+}
+
+
+
+////////////////////////////////////
+/////// Susy layout patterns ///////
+////////////////////////////////////
+
+
+@mixin copy__alpha {
+
+	@include span(20 of 24);
+	@include push(2 of 24);
+	@include post(2 of 24);
+
+	@include bkp(break__2) {
+
+		@include span(18 of 24);
+		@include push(2 of 24);
+		@include post(4 of 24);
+
+	}
+
+	@include bkp(break__3) {
+
+		@include span(12 of 24);
+		@include push(4 of 24);
+		@include post(8 of 24);
+		
+	}
+
+}

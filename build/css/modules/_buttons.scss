@@ -1,0 +1,79 @@
+.btn {
+	border:none;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 10px 20px;
+	line-height: 1;
+	color: $white;
+	background: $color-a;
+
+	@include transition(all 0.5s ease);
+
+	&:hover {
+		background: $color-s1;
+		text-decoration:none;
+	}
+
+	&:visited {
+		text-decoration: none;
+	}
+
+}
+
+a.btn, a.btn:visited {
+	color: $white;
+}
+
+.btn--primary {
+	
+}
+
+.btn--beta {
+	background: $color-b;
+	&:hover {
+		background: $color-t4;
+	}
+}
+
+.btn--gamma {
+	background: $color-g;
+	&:hover {
+		background: $color-t3;
+	}
+}
+
+.btn--link {
+	background: none;
+	color: $color-a;
+
+	&:hover {
+		background: inherit;
+		color: $color-b;
+	}
+}
+
+.btn--lg {
+	padding: 14px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+}
+
+.btn--sm {
+	padding: 8px 12px;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.btn--xs {
+	padding: 6px 10px;
+	font-size: 10px;
+	line-height: 1;
+}
+
+.btn--block {
+	display: block;
+	float: none;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}

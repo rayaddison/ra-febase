@@ -1,0 +1,289 @@
+////////////////////////////////////////
+//////////////// Body //////////////////
+////////////////////////////////////////
+
+body {
+    font-size: 100%;
+    text-align: left;
+    line-height: 1.25em;
+    font:{
+    	family: $font-normal;
+	}
+
+    @include bkp(break__2) {
+        line-height:1.375em;
+    }
+}
+
+$baseFontSize: 16px; // Must be the same as html font size to calculate REM
+
+html,html>body {
+    font-size: 16px; 
+}
+
+
+/////////////////////////////////////////
+/////////////// Headings ////////////////
+/////////////////////////////////////////
+
+%h1, %h2, %h3, %h4, %h5, %h6 {
+    margin: 20px 0; // For IE8
+    margin: 1.25rem 0; // 20px
+    line-height: 20px; // For IE8
+    line-height: 1.25em; // 20px
+    @include fontRem(1);
+    font: {
+        family: $font-headings;
+    }
+
+}
+
+%h1 {
+    @include fontRem(2);
+    line-height: 1.25em; // 40px
+    margin-top: 0.625em; // 20px
+    margin-bottom: 0.625em; // 20px
+
+    @include bkp(break__2) {
+        @include fontRem(2.5);
+        line-height: 1.125em; // 45px
+        margin-top: 0.5em; // 20px
+        margin-bottom: 0.5em; // 20px
+    }
+    @include bkp(break__3) {
+        @include fontRem(3);
+        line-height: 1.05em; // 50px
+        margin-top: 0.41666667em; // 20px
+        margin-bottom: 0.41666667em; // 20px
+    }
+}
+
+%h2 {
+    @include fontRem(1.625);
+    line-height: 1.15384615em; // 40px
+    margin-top: 0.769230769em; // 20px
+    margin-bottom: 0.769230769em; // 20px
+
+    @include bkp(break__2) {
+        @include fontRem(2);
+        line-height: 1.25em;
+        margin-top: 0.625em; // 20px
+        margin-bottom: 0.625em; // 20px
+    }
+    @include bkp(break__3) {
+        @include fontRem(2.25);
+        line-height: 1.25em;
+        margin-top: 0.55555556em; // 20px
+        margin-bottom: 0.55555556em; // 20px
+    }
+}
+
+%h3 {
+    @include fontRem(1.375);
+    line-height: 1.13636364em; // 25px
+    margin-top: 0.90909090em; // 20px
+    margin-bottom: 0.90909090em; // 20px
+
+    @include bkp(break__2) {
+        @include fontRem(1.5);
+        line-height: 1.25em; // 30px
+        margin-top: 0.83333333em; // 20px
+        margin-bottom: 0.83333333em; // 20px
+    }
+    @include bkp(break__3) {
+        @include fontRem(1.75);
+        line-height: 1.25em; // 35px
+        margin-top: 0.71428574em; // 20px
+        margin-bottom: 0.71428574em; // 20px
+
+    }
+}
+
+%h4 {
+    @include fontRem(1.125);
+    line-height: 1.11111111em; // 20px
+    margin-top: 1.11111111em; // 20px
+    margin-bottom: 1.11111111em; // 20px
+
+    @include bkp(break__2) {
+        line-height: 1.22222222em; // 22px
+    }
+}
+
+h1 {
+    @extend %h1;
+}
+
+h2 {
+    @extend %h2;
+}
+
+h3 {
+    @extend %h3;
+}
+
+h4 {
+    @extend %h4;
+}
+
+h5 {
+    @extend %h4;
+}
+
+h6 {
+    @extend %h4;
+}
+
+/////////////////////////////////////////
+////////////// Paragraphs ///////////////
+/////////////////////////////////////////
+
+p {
+    margin: 0 0 20px 0; // Fro IE8
+    margin: 0 0 1.25rem 0; // 20px
+    line-height: 1.5em; // 20px
+
+    &.small {
+        @extend %small;
+    }
+
+    &.strong {
+        @extend %strong;
+    }
+
+    &.first--para {
+
+        @extend %strong;
+        font: {
+            size:1.25em;
+        };
+
+    }
+
+    &.text-muted {
+        color: $grey-t3;
+    }
+
+    &.text-primary {
+        color: $color-a;
+    }
+
+    &.text-secondary {
+        color: $color-s1;
+    }
+}
+
+/////////////////////////////////////////
+/////////////// Generic /////////////////
+/////////////////////////////////////////
+
+
+%small {
+    @include fontRem(0.875); // 14px
+}
+
+small {
+    @extend %small;
+}
+
+%large {
+    @include fontRem(1.25); // 20px
+}
+
+large {
+    @extend %large;
+}
+
+%strong {
+    font: {
+        family: $font-headings;
+    }
+}
+
+strong {
+    @extend %strong;
+}
+
+
+blockquote {
+
+    position: relative;
+
+	@include fontRem(2);
+	line-height: 1.25em;
+    line-height: 1.31578947em;
+
+	@include bkp(break__2) {
+		@include fontRem(2.375);
+	};
+
+    background: $color-d;
+    color: $white;
+    font-family: $font-headings;
+	padding: 20px;
+    text-indent: 1.25em;
+
+	&.pull--right {
+		text-align: right;
+		border-left: 0;
+		border-right: 5px solid $grey-t1;
+	}
+
+    &:before {
+
+        position: absolute;
+        width: 1px; // required to stop the layout breaking
+        left: -12px;
+        top: 1em;
+        text-align: left;
+        color: $white;
+        content: "\201C";
+        line-height: 6px;
+        letter-spacing: -3px;
+        margin-bottom: -10px;
+
+    }
+
+    &:after {
+        content: "\201D";
+    }
+
+    // Colour options
+    // Use modifier classes color--1, color--2, color--3
+
+    @for $i from 1 through length($project-colours) {
+
+        &.color--#{$i} {
+
+            background-color: nth($project-colours, $i);
+
+        }
+
+    }
+
+}
+
+article {
+    ul, ol {
+        margin: 0 0 20px 0; // Fro IE8
+        margin: 0 0 1.25rem 0; // 20px
+        line-height: 1.5em; // 20px
+        @include fontRem(1.25);
+    }
+}
+
+/////////////////////////////////////////
+//////////////// Links //////////////////
+/////////////////////////////////////////
+
+a, a:visited {
+    
+	color: $color-a;
+	text-decoration: none;
+    @include transition(all 0.5s ease);
+
+	&:hover,&:focus {
+		text-decoration: underline;
+	}
+
+}

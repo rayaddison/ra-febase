@@ -1,0 +1,155 @@
+//////////////////////////////////////////
+////// Stylesheet styles and layout //////
+//////////////////////////////////////////
+
+
+.styleguide--wrapper {
+
+	@include global-box-sizing(border-box); // ensures everything in styleguide has susy default box-sizing model
+
+	margin: 0 auto;
+
+	@include bkp(break__1) {
+	width: 460px;
+	}
+	@include bkp(break__2) {
+	width: 700px;
+	}
+	@include bkp(break__3) {
+	width: 940px;
+	}
+}
+
+.styleguide--header {
+	font-family: sans-serif;
+	font: {
+		size:20px;
+	};
+	color: $grey-t8;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 1em 0;
+	border-top: 1px solid $grey-t3;
+	border-bottom: 1px solid $grey-t3;
+	background: $grey-t1;
+	padding-left:10px;
+}
+
+h2.styleguide--header {
+	font: {
+		size:12px;
+	};
+	border-top: 1px dashed $grey-t3;
+	border-bottom: 1px dashed $grey-t3;
+	background:none;
+	padding-left:0px;
+}
+
+
+hr.styleguide--hr {
+	clear: both;
+	margin: 0 0 20px 0;
+	padding: 20px 0 0 0;
+	border:none;
+	border-bottom: 1px solid $grey-t1;
+}
+
+///// Palette /////
+
+.palette__grid {
+    
+    @include container;
+
+    ul {
+    	list-style: none;
+    	padding-left: 0px;
+    }
+
+
+	li {
+
+	    @include gallery(3 of 12);
+	    height: 100px;
+	    margin-bottom: gutter();
+	    position: relative;
+
+	    &:after {
+
+    		position: absolute;
+    		bottom: -2em;
+
+    	}
+
+	}
+
+	.project {
+
+		li {
+
+			@for $i from 1 through length($project-colours) {
+
+	   			&:nth-child(#{$i}) {
+
+					background-color: nth($project-colours, $i);
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.primary {
+
+		li {
+
+	    	background: $color-a;
+
+	    }
+
+	}
+
+	.secondary {
+
+		li {
+
+			@for $i from 1 through length($secondary-palette) {
+
+	   			&:nth-child(#{$i}) {
+
+					background-color: nth($secondary-palette, $i);
+
+				}
+
+			}
+
+		}
+	    
+	}
+
+	.tertiary {
+
+		li {
+
+			@for $i from 1 through length($tertiary-palette) {
+
+	   			&:nth-child(#{$i}) {
+
+					background-color: nth($tertiary-palette, $i);
+
+				}
+
+			}
+
+		}
+	    
+	}
+
+}
+
+///// Print /////
+
+@media print {
+    * {-webkit-print-color-adjust:exact;}
+}

@@ -1,0 +1,71 @@
+// Set your global variables below
+// i.e. $foo: #000;
+// Main colour palette
+
+/////////// Standard Colors ////////////////
+
+$black: #000;
+$white: #fff;
+$warning: #ff0000;
+
+////////////////////////////////////////////
+/////////// Main colour palette ////////////
+////////////////////////////////////////////
+
+// Primary palette
+
+$color-p1: red;
+$color-p2: blue;
+$color-p3: green;
+$color-p4: yellow;
+
+
+// Secondary palette
+
+$color-s1: magenta;
+$color-s2: cyan;
+$color-s3: coral;
+$color-s4: gold;
+
+// Tertiary palette
+
+$color-t1: indigo;
+$color-t2: lime;
+$color-t3: olive;
+$color-t4: teal;
+
+// Project colours
+// Greek alpabet
+
+$color-a: $color-p1;
+$color-b: $color-p2;
+$color-g: $color-p3;
+$color-d: $color-p4;
+
+/////////// Color Variable Arrays /////////////
+
+$project-colours: $color-a, $color-b, $color-g, $color-d;
+$secondary-palette: $color-s1, $color-s2, $color-s3, $color-s4;
+$tertiary-palette: $color-t1, $color-t2, $color-t3, $color-t4;
+
+
+
+////////////////// Greys ///////////////////
+
+$grey-t1: scale-color($black, $lightness: 90%);
+$grey-t2: scale-color($black, $lightness: 80%);
+$grey-t3: scale-color($black, $lightness: 70%);
+$grey-t4: scale-color($black, $lightness: 60%);
+$grey-t5: scale-color($black, $lightness: 50%);
+$grey-t6: scale-color($black, $lightness: 40%);
+$grey-t7: scale-color($black, $lightness: 30%);
+$grey-t8: scale-color($black, $lightness: 20%);
+$grey-t9: scale-color($black, $lightness: 10%);
+
+////////////////////////////////////////////
+////////////////// Fonts ///////////////////
+////////////////////////////////////////////
+
+$font-normal: Arial, sans-serif;
+$font-headings: Arial, sans-serif;
+

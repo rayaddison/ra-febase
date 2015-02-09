@@ -1,0 +1,42 @@
+// There are three break points to edit but you can add more
+// To use call the breakpoint and add your styles.
+// i.e.  @include breakpoint(desktop) {width:400px;}
+
+// These breakpoints are defined by the base bootsrap grid layout in bootstrap.scss
+
+@mixin bkp($point) {
+
+  // Breakpoints for susy layouts
+
+  @if $point == break__4 {
+    @media (min-width: 1460px) { @content; }
+  }
+  @if $point == break__3 {
+    @media (min-width: 980px) { @content; }
+  }
+  @else if $point == break__2 {
+    @media (min-width: 740px) { @content; }
+  }
+  @else if $point == break__1 {
+    @media (min-width: 500px)  { @content; }
+  }
+
+  // Breakpoints for wallpanel layout
+
+
+  @if $point == wall__break__3 {
+    @media (min-width: 980px) { @content; }
+  }
+  @else if $point == wall__break__2 {
+    @media (min-width: 660px) { @content; }
+  }
+  @else if $point == wall__break__1 {
+    @media (min-width: 340px)  { @content; }
+  }
+
+  // Retina detector
+
+  @else if $point == retina {
+    @media all and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
+  }
+}
