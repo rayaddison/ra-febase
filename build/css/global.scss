@@ -21,8 +21,8 @@
 // Imports for other scss files. Bootsrap will require the developer to manually set the breakpoints used in the site in order for the grid system to operate correctly.
 
 @import "reset/_all",
-		"susy",
-		"vendor/_all",
+		"../../bower_components/susy/sass/susy",
+		"../../node_modules/bourbon-libsass/dist/bourbon",
 		"_variables",
  		"_mixins",
  		"_media-queries",

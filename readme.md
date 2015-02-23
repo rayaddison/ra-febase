@@ -9,7 +9,7 @@ Ensure the following are installed;
 * Sass - http://sass-lang.com
 * Grunt - http://gruntjs.com
 * Susy 2 - http://susydocs.oddbird.net
-* Bourbon - http://bourbon.io
+* Bower - http://bower.io
 
 ###Dependancies
 
@@ -20,16 +20,9 @@ $npm install
 ````
 
 ````
-Update bourbon
+$bower install
 ````
 
-````
-$cd build/css/vendor
-````
-
-````
-$bourbon update
-````
 
 ###Grunt
 

@@ -1,0 +1,27 @@
+{
+  "name": "ra-base",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rayaddison/ra-base",
+  "authors": [
+    "Ray Addison <ray@rayaddison.com>"
+  ],
+  "description": "Base repo for front-end development",
+  "main": "/web/index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  }
+}
