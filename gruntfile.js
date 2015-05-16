@@ -15,8 +15,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [ 
-                    'build/js/vendor/onmediaquery/onmediaquery.min.js',
-                    'build/js/vendor/retina/retina.js',    
+                    'build/js/vendor/onmediaquery/onmediaquery.min.js', 
                     'build/js/vendor/respond/respond.js',                  
                     'build/js/global.js',
                     'build/js/vendor/modernizr/modernizr.js'

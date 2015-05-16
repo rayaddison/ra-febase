@@ -148,6 +148,24 @@ hr.styleguide--hr {
 
 }
 
+///// IE shiv test /////
+
+.ieshivtest__children {
+
+	li {
+
+		&:first-child {
+			color: blue;
+		}
+
+		&:last-child {
+			color: green;
+		}
+
+	}
+
+}
+
 ///// Print /////
 
 @media print {
