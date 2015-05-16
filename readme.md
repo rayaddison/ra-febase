@@ -78,6 +78,5 @@ Included in md pages from Google APIs, fallback to local copy.
 
 * onmediaquery - used to add after content tag to body
 * retina.js - if there's an @2x version , use it
-* respond.js - For IE8 media queries (required to show above break__0)
 * Modernizer - target browsers using html tag css classes based on support offered
 
