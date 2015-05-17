@@ -12,6 +12,21 @@
   font-size: ($rem) + rem;
 }
 
+// Vertical rythym scale
+// Set to units of 20px
+
+// Margins
+
+@mixin marginVert($expression, $unit) {
+	margin-#{$expression}: #{($unit * 20)}px;
+}
+
+// Padding
+
+@mixin paddingVert($expression, $unit) {
+	padding-#{$expression}: #{($unit * 20)}px;
+}
+
 // Box shadow
 
 @mixin shadow($x, $y, $blur, $spread, $color) {
